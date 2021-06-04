@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shorcut icon" type="image/x-icon" href="Media/logo-2.png" />
+    <link rel="stylesheet" href="../CSS/home.css" />
+    <title>SpotiSearch</title>
+  </head>
+  <body>
+    <section class="gradient">
+      <section class="header">
+        <nav class="navbar">
+          <p class="brand">SpotiSearch</p>
+          <div class="nav-right">
+            <p class="username">
+              <script src="./Scripts/getUsername.js"></script>
+            </p>
+            <a class="logout greyText">
+              <script>
+                const button = document.querySelector(".logout");
+                function isLoggedIn() {
+                  return Boolean(localStorage.getItem("token"));
+                }
+                console.log(isLoggedIn());
+                button.innerHTML = isLoggedIn() ? "Logout" : "Log In";
+              </script></a
+            >
+          </div>
+        </nav>
+      </section>
+      <input type="text" placeholder="Search a Song..." class="searchBar" />
+      <div id="infoBlockDiv" class="infoBlockDiv hidden">
+        <div class="infoLeft">
+          <img src="" alt="no image" class="albumArt" />
+          <div class="spotifyContainer">
+            <a href="" id="spotifyLink" target="_blank"
+              ><input
+                type="image"
+                src="../Media/spotifyBtn.png"
+                class="spotifyBtn"
+            /></a>
+          </div>
+        </div>
+        <div class="inforight">
+          <p
+            class="whiteText"
+            id="track"
+            style="font-size: 55px; font-weight: bold"
+          ></p>
+          <p
+            class="whiteText"
+            id="artist"
+            style="font-size: 25px; font-weight: 500"
+          ></p>
+          <p
+            class="greyText"
+            id="albumName"
+            style="font-size: 20px; margin-top: 7px"
+          ></p>
+          <br />
+          <p class="whiteText" style="font-size: 25px; font-weight: 500">
+            Audio Features:
+          </p>
+          <p class="whiteText" style="font-size: 18px">
+            Dancebility: <span id="dancebility"></span>%
+          </p>
+          <p class="whiteText" style="font-size: 18px">
+            Energy: <span id="energy"></span>%
+          </p>
+          <p class="whiteText" style="font-size: 18px">
+            Acousticness: <span id="acousticnes"></span>%
+          </p>
+          <p class="whiteText" style="font-size: 18px">
+            Liveness: <span id="liveness"></span>%
+          </p>
+          <p class="whiteText" style="font-size: 18px">
+            Tempo: <span id="tempo"></span>
+          </p>
+        </div>
+      </div>
+      <div class="footer">
+        <nav class="navbar"></nav>
+      </div>
+    </section>
+    <script src="Scripts/search.js"></script>
+    <script src="../Scripts/script.js"></script>
+  </body>
+</html>
