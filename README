@@ -1,5 +1,5 @@
 About:
-This is a simple client for Spotify where you can search any song on the Spotify API. 
+This is a simple client for Spotify where you can search any song on the Spotify API. In order to use this, please follow the setup instructions below. Once you have the client running on your browswer, click the login button in the top right corner and login to your Spotify account. Once you are logged in, you can proceed to search Spotfiy!
 
 Setup:
 1. Install node.js
